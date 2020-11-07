@@ -19,6 +19,13 @@
             <h2>Sobre os criadores</h2>
             <p>Pedro e Joaquim foram os idealizadores dessa revolução na cozinha. Os dois são politrecos e um torce pro grande São Paulo e o outro pro minúsculo Flamengo. A ideia surgiu quando Joaquim estava assistindo um jogo do Neymar, e no meio do jogo, o menino ney parou a bola e deu um berro: QUERIA SABER COZINHAR.</p>
         </div>
+        {% for post in posts %}
+            <div>
+            <h2><strong>{{post.title}}</strong></h2>
+            <p>{{post.text|linebreaksbr}}</p>
+            <p> published: {{post.published_date}}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
 
